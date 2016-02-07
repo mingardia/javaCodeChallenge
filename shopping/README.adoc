@@ -1,0 +1,69 @@
+:imagesdir: images
+== Shipping Card Challenge
+
+Welcome to the shopping cart challenge.  This model is a pretty straight forward shipping experience back end system
+simulation.  The model is pretty straight forward.  There are products, customers, orders, payments, and a cart.  As
+you might expect products are added to the cart and then submitted to a checkout service that is ment to "check"
+the customer out.  Checking the customer out should go through the cart and using payment information utilize a
+payment gateway service to process a payment and then update the customer's order history.
+
+Here is a mostly correct diagram of the model.  As with most enterprises the documentation lags the code so the diagram
+is not 100% accurate but a decent depiction
+
+image::ShoppingCartModel.png[Model, 900,600]
+
+
+Some things to note about the architecture:
+
+- Every model object has an id field which is assumed to be unique.
+- The database is represented as a "Stub" class currently that basically manages a bunch of hash maps.  The id
+  is used as a key into these hashmaps
+- The architecture uses spring-boot, you can execute the server using mvn spring-boot:run at the root of the project
+- The architecture exposes rest end points which are standard jax-rs annotated classes
+- The rest end points are configured to be under /api/v1/{yourControllerPath}/{yourMethodPath}
+
+
+There is a sample end point you can test to see if your envirionment is set upright.  Run the application
+ by running mvn spring-boot:run at the root.  Then use post map or another tool to hit the url
+  http://localhost:8080/api/v1/sampleCustomer/example
+
+
+This should return
+
+ [source,json]
+ ----
+{
+  "id": "11111",
+  "name": "Sample Name",
+  "orderHistory": null
+}
+ ----
+
+Besides that here is the general layout of the maven project.  In general it should be what you expect from
+a maven project.
+
+
+The file lay out:
+
+[tree,file="directoryLayout"]
+--
+ src
+    |-- main
+        |-- java
+           `-- com
+               `-- enspirecommerce
+                   `-- javaCodeChallenge
+                       |-- config
+                       |-- controller
+                       |-- model
+                       `-- service
+--
+
+
+Config contains the main springboot configuration to enable finding controllers and utilizes cxf.  Controller
+contains the jax-rs controllers, model contains the model classes and service contains the services.
+JavaChallengeApp1 contains the main spring boot main class.
+
+== Challenges
+
+1.

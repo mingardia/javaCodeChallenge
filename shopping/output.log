@@ -1,0 +1,5 @@
+12:17:46,901 - DEBUG com.enspirecommerce.javaCodeChallenge.AppTest - Test 123
+12:40:38,988 - DEBUG com.enspirecommerce.javaCodeChallenge.AppTest - Test 123
+12:55:03,522 - DEBUG com.enspirecommerce.javaCodeChallenge.AppTest - Show how jackson can convert something to json
+12:55:56,455 - DEBUG com.enspirecommerce.javaCodeChallenge.AppTest - Show how jackson can convert something to json
+12:55:56,618 - INFO com.enspirecommerce.javaCodeChallenge.AppTest - Json Value:{"id":"12312321","name":"TestName","orderHistory":null}
