@@ -86,3 +86,6 @@ JavaChallengeApp1 contains the main spring boot main class.
 
 7. Provide a design of how you would introduce the notion of allowing the same infrastructure to handle multiple
    websites at the same time, including that some of those sites may be utilizing different currencies.
+
+8. The credit card information needs to be encrypted.  Change the code to store the data encryped in the data store
+   this may require bring in new dependencies.
