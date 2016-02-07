@@ -23,7 +23,7 @@ public class SampleCustomerController {
 
     @Path("/example")
     @GET
-    @Produces(value = MediaType.APPLICATION_JSON + "," + MediaType.APPLICATION_XML)
+    @Produces(value = MediaType.APPLICATION_JSON)
     public Response getSampleCustomer()
     {
         Customer c = customerDAO.getSampleCustomer();

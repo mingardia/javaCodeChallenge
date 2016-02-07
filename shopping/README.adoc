@@ -1,4 +1,5 @@
 :imagesdir: images
+:source-highlighter: coderay
 == Shipping Card Challenge
 
 Welcome to the shopping cart challenge.  This model is a pretty straight forward shipping experience back end system
@@ -30,14 +31,14 @@ There is a sample end point you can test to see if your envirionment is set upri
 
 This should return
 
- [source,json]
- ----
+[source,json]
+----
 {
   "id": "11111",
   "name": "Sample Name",
   "orderHistory": null
 }
- ----
+----
 
 Besides that here is the general layout of the maven project.  In general it should be what you expect from
 a maven project.
@@ -66,4 +67,22 @@ JavaChallengeApp1 contains the main spring boot main class.
 
 == Challenges
 
-1.
+1. Finish out a full create, read, update, and delete scenario for customer.  This would mean adding more
+   rest end points to the existing controller and interacting with the service and dataStoreStub classes.
+
+2. Refactor the model classes and abstract away the common element into a base class ( the id ).  Leverage
+   the common base class in the implementation of the dataStoreStub such that it can generically handle any
+   future class that derives from the newly created base class.
+
+3. Add the ability to unit test your rest endpoint.  This will mean you have to perhaps add new dependencies
+   to the project, and write out some unit tests to interact with the rest end points.
+
+4. Finish out the implementation of the checkoutService to actually update the customer correctly and create
+   a new order.
+
+5. Refactor the payment gateway service so that new implementations of the class can be added at a later time.
+
+6. Add the ability to return XML not just JSON from your rest end points.
+
+7. Provide a design of how you would introduce the notion of allowing the same infrastructure to handle multiple
+   websites at the same time, including that some of those sites may be utilizing different currencies.
