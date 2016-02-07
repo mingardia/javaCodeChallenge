@@ -24,7 +24,7 @@ Some things to note about the architecture:
 - The rest end points are configured to be under /api/v1/{yourControllerPath}/{yourMethodPath}
 
 
-There is a sample end point you can test to see if your envirionment is set upright.  Run the application
+There is a sample end point you can test to see if your environment is set upright.  Run the application
  by running mvn spring-boot:run at the root.  Then use post map or another tool to hit the url
   http://localhost:8080/api/v1/sampleCustomer/example
 
@@ -67,25 +67,34 @@ JavaChallengeApp1 contains the main spring boot main class.
 
 == Challenges
 
-1. Finish out a full create, read, update, and delete scenario for customer.  This would mean adding more
+1. Add a generic way to generate id's and use this mechanism when you create various objects.  Add the ability
+   to also generate other kinds of numbers such as the "order number".
+
+2. Finish out a full create, read, update, and delete scenario for customer.  This would mean adding more
    rest end points to the existing controller and interacting with the service and dataStoreStub classes.
 
-2. Refactor the model classes and abstract away the common element into a base class ( the id ).  Leverage
+3. Refactor the model classes and abstract away the common element into a base class ( the id ).  Leverage
    the common base class in the implementation of the dataStoreStub such that it can generically handle any
    future class that derives from the newly created base class.
 
-3. Add the ability to unit test your rest endpoint.  This will mean you have to perhaps add new dependencies
+4. Add the ability to unit test your rest endpoint.  This will mean you have to perhaps add new dependencies
    to the project, and write out some unit tests to interact with the rest end points.
 
-4. Finish out the implementation of the checkoutService to actually update the customer correctly and create
+5. Finish out the implementation of the checkoutService to actually update the customer correctly and create
    a new order.
 
-5. Refactor the payment gateway service so that new implementations of the class can be added at a later time.
+6. Refactor the payment gateway service so that new implementations of the class can be added at a later time.
 
-6. Add the ability to return XML not just JSON from your rest end points.
+7. Add the ability to return XML not just JSON from your rest end points.
 
-7. Provide a design of how you would introduce the notion of allowing the same infrastructure to handle multiple
+8. Provide a design of how you would introduce the notion of allowing the same infrastructure to handle multiple
    websites at the same time, including that some of those sites may be utilizing different currencies.
 
-8. The credit card information needs to be encrypted.  Change the code to store the data encryped in the data store
+9. The credit card information needs to be encrypted.  Change the code to store the data encrypted in the data store
    this may require bring in new dependencies.
+
+
+I highly recommend you use an ide.  Preferably inteli-j but eclipse is also a decent free alternative.
+
+To submit the code to me when your done simply zip up your project and send it to me at mingardia@enspirecommerce.com
+
