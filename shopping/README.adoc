@@ -1,6 +1,6 @@
 :imagesdir: images
 :source-highlighter: coderay
-== Shipping Card Challenge
+== Shopping Cart Challenge
 
 Welcome to the shopping cart challenge.  This model is a pretty straight forward shipping experience back end system
 simulation.  The model is pretty straight forward.  There are products, customers, orders, payments, and a cart.  As
