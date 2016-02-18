@@ -2,7 +2,7 @@
 :source-highlighter: coderay
 == Shopping Cart Challenge
 
-Welcome to the shopping cart challenge.  This model is a pretty straight forward shipping experience back end system
+Welcome to the shopping cart challenge.  This model is a pretty straight forward shopping experience back end system
 simulation.  The model is pretty straight forward.  There are products, customers, orders, payments, and a cart.  As
 you might expect products are added to the cart and then submitted to a checkout service that is ment to "check"
 the customer out.  Checking the customer out should go through the cart and using payment information utilize a
