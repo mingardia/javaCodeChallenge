@@ -25,7 +25,7 @@ Some things to note about the architecture:
 
 
 There is a sample end point you can test to see if your environment is set upright.  Run the application
- by running mvn spring-boot:run at the root.  Then use post map or another tool to hit the url
+ by running mvn spring-boot:run at the root.  Then use post man or another tool to hit the url
   http://localhost:8080/api/v1/sampleCustomer/example
 
 
