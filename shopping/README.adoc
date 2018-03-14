@@ -96,5 +96,4 @@ JavaChallengeApp1 contains the main spring boot main class.
 
 I highly recommend you use an ide.  Preferably inteli-j but eclipse is also a decent free alternative.
 
-To submit the code to me when your done simply zip up your project and send it to me at mingardia@enspirecommerce.com
 
